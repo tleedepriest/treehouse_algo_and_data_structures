@@ -3,6 +3,11 @@ This script will implement a linked list from memory
 """
 
 class Node:
+    """
+    Modeling a Node contained in Simply Linked List
+    attributes of the node are the data within the node and the next_node
+    it is linked to.
+    """
     data = None
     next_node = None
     
