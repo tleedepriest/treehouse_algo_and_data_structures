@@ -68,11 +68,11 @@ class LinkedList:
         next_node = current.next_node
         while current:
             if current == self.head:
-                components.append(f"Head: {current}")
+                components.append(f"Head: {current.data}")
             elif current.next_node:
-                components.append(f"{current}")
+                components.append(f"{current.data}")
             else:
-                components.append(f"Tail: {current}")
+                components.append(f"Tail: {current.data}")
             current = current.next_node
         return '-> '.join(components)
         
