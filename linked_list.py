@@ -59,6 +59,20 @@ class LinkedList:
         self.head = new_node
 
     def __repr__(self):
-        pass
-
+        """
+        This will be O(n) run time since it will have to itterate through
+        all components
+        """
+        components = []
+        current = self.head
+        next_node = current.next_node
+        while current:
+            if current == self.head:
+                components.append(f"Head: {current}")
+            elif current.next_node:
+                components.append(f"{current}")
+            else:
+                components.append(f"Tail: {current}")
+            current = current.next_node
+        return '-> '.join(components)
         
