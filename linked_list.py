@@ -51,6 +51,9 @@ class LinkedList:
             count+=1
         return count
 
+    # just realized that this is what links the Node Class to the Linked List!
+    # by using the class here, we guarantee that all values in the linked list
+    # are Node objects..very cool.
     def add(self, data):
         """
         will add data to the front of the list, redefining the head
