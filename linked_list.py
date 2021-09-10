@@ -66,6 +66,20 @@ class LinkedList:
         new_node.next_node = self.head
         self.head = new_node
 
+    def search(self, key):
+        """
+        This adds the ability to search for a particular point in
+        linked list. This time complexity is O(n)
+        """
+        current = self.head
+        while current:
+            if current.data == key:
+                # assuming we want the actual node object
+                return current
+            else:
+                current = current.next_node
+        return None
+
     def __repr__(self):
         """
         This will be O(n) run time since it will have to itterate through
@@ -76,11 +90,11 @@ class LinkedList:
         next_node = current.next_node
         while current:
             if current == self.head:
-                components.append(f"Head: {current.data}")
+                components.append(f"[Head: {current.data}]")
             elif current.next_node:
-                components.append(f"{current.data}")
+                components.append(f"[{current.data}]")
             else:
-                components.append(f"Tail: {current.data}")
+                components.append(f"[Tail: {current.data}]")
             current = current.next_node
-        return '-> '.join(components)
+        return ' -> '.join(components)
         
